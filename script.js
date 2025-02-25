@@ -20,10 +20,12 @@ const body = document.querySelector('body');
 body.style.backgroundImage = 'url("https://picsum.photos/1200/720")';
 body.style.backgroundSize = 'cover';
 body.style.backgroundRepeat = 'no-repeat';
-body.onload = function(){
-    Username = prompt('Please enter your name.');
-    body.innerHTML = `<h1>Hey, ${Username}</h1><button id="btn">Refresh !</button>`;
+
+body.onload = () =>{
+    // Username = prompt('Please enter your name.');
+    body.innerHTML = `<h1></h1><button id="btn">Refresh !</button>`;
     const h1 = document.querySelector('h1');
+    h1.innerText = `Hello There!`;
     h1.style.display = 'flex';
     h1.style.justifyContent = 'center';
     h1.style.alignItems = 'center';
@@ -48,8 +50,11 @@ body.onload = function(){
     btn.style.border = 'none';
     btn.style.borderRadius = '5px';
     btn.style.cursor = 'pointer';
+    btn.setAttribute("type", "button");
+    // console.log(btn.getAttribute("type"));
 
     btn.addEventListener('click', function(){
         window.location.reload();
-    });
-    };
+    }
+);
+};
