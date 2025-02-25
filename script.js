@@ -19,7 +19,7 @@ const body = document.querySelector('body');
 console.log(body);
 body.style.backgroundImage = 'url("https://picsum.photos/1200/720")';
 body.style.backgroundSize = 'cover';
-// body.style.backgroundRepeat = 'no-repeat';
+body.style.backgroundRepeat = 'no-repeat';
 
 const h1 = document.querySelector('h1');
 h1.style.display = 'flex';
