@@ -23,7 +23,7 @@ body.style.backgroundRepeat = 'no-repeat';
 
 body.onload = () =>{
     // Username = prompt('Please enter your name.');
-    body.innerHTML = `<h1></h1><button id="btn">Refresh !</button>`;
+    body.innerHTML = `<h1></h1><button id="btn">Refresh !</button><p></p>`;
     const h1 = document.querySelector('h1');
     h1.innerText = `Hello There!`;
     h1.style.display = 'flex';
@@ -45,16 +45,32 @@ body.onload = () =>{
     btn.style.alignItems = 'center';
     btn.style.marginTop = '20px';
     btn.style.backgroundColor = 'black';
+    btn.style.border = '2px solid white';
     btn.style.color = 'white';
     btn.style.padding = '10px 32px';
     btn.style.border = 'none';
     btn.style.borderRadius = '5px';
     btn.style.cursor = 'pointer';
     btn.setAttribute("type", "button");
-    // console.log(btn.getAttribute("type"));
+
+    btn.addEventListener('mouseover', function(){
+        btn.style.backgroundColor = 'white';
+        btn.style.border = '2px solid black';
+        btn.style.color = 'black';
+    });
+
+    btn.addEventListener('mouseout', function(){
+        btn.style.backgroundColor = 'black';
+        btn.style.color = 'white';
+    });
 
     btn.addEventListener('click', function(){
         window.location.reload();
-    }
-);
+    });
+
+    const p = document.querySelector('p');
+    p.innerText = `This web page is powered by JavaScript.`;
+    p.style.display = 'flex';
+    p.style.justifySelf = 'center';
+    // p.style.alignItems = 'center';
 };
